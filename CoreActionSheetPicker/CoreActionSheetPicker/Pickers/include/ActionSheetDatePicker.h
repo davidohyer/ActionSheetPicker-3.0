@@ -26,6 +26,7 @@
 //
 
 #import <AbstractActionSheetPicker.h>
+#import <CoreActionSheetMonthYearPicker.h>
 
 typedef enum {
     ActionSheetDatePickerModeTime,
