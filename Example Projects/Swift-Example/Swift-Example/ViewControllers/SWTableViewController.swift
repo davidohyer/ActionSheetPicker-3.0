@@ -83,6 +83,7 @@ class SWTableViewController: UITableViewController, UITextFieldDelegate {
         if #available(iOS 14.0, *) {
             datePicker?.datePickerStyle = .inline
         }
+        datePicker?.tapDismissAction = .nothing
 
         datePicker?.show()
     }
@@ -101,11 +102,15 @@ class SWTableViewController: UITableViewController, UITextFieldDelegate {
                                                cancel: { _ in
                                                },
                                                origin: sender.superview!.superview)
-        datePicker?.minuteInterval = 20
+        datePicker?.minuteInterval = 5
         if #available(iOS 13.4, *) {
             datePicker?.datePickerStyle = .automatic
         }
-
+        if #available(iOS 14, *) {
+            datePicker?.datePickerStyle = .inline
+        }
+        datePicker?.tapDismissAction = .nothing
+        
         datePicker?.show()
     }
 

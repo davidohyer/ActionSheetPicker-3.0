@@ -314,6 +314,8 @@ CG_INLINE BOOL isIPhone4() {
                 [self.actionSheet.window addGestureRecognizer:tapAction];
                 break;
             }
+            case TapActionNothing:
+                break;
         };
     }
 #pragma clang diagnostic pop
